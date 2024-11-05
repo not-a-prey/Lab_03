@@ -5,9 +5,15 @@ import java.util.List;
 
 /*
 Головний клас Main, з виконавчим методом main(), в якому використовуютсья та тестуються методи класу Plane.
+
+@author: Луценко Дмитро, група ІО-22, номер у списку групи: 13.
  */
 public class Main {
     public static void main(String[] args) {
+        int c11 = 2213 % 11;
+
+        System.out.println("Лабораторна робота №3. Виконав: Луценко Дмитро Ігорович. Група: ІО-22. Номер у списку: 13");
+        System.out.println("Визначити клас за варіантом 2213 mod 11: " + c11 + " - клас літак, який складається як мінімум з 5-и полів.");
         /*
         Створюємо 4 екземпляри літаків.
          */
@@ -29,7 +35,7 @@ public class Main {
         Сортуємо список за крейсерською швидкістю за зростанням за допомогою Comparator.comparingInt().
          */
         Collections.sort(planes, Comparator.comparingInt(Plane::getCruisingSpeed));
-        System.out.println("---Відсотровані літаки за (крейсерською швидкістю) за зростанням---");
+        System.out.println("\n---Відсотровані літаки за (крейсерською швидкістю) за зростанням---");
         for (Plane plane : planes) {
             System.out.println(plane.printPlaneInfo());
         }
